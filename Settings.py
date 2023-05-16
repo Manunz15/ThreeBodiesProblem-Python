@@ -1,6 +1,6 @@
-G=6.67e-11           #Gravitational constant
-TAU=0.001            #Max time-step
-CONST=900          #Constant for variable time-step
+G=6.67e-11          #Gravitational constant
+TAU=0.01            #Max time-step
+CONST=900           #Constant for variable time-step
 
 #Masses in Exagrams, velocities in km/s, distances in milions of kilometers
 
