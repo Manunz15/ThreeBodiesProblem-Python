@@ -7,7 +7,7 @@ def PlotTraejctory(OBJECTS,years):
         plt.scatter(object.x,object.y,label=object.name)
         plt.plot(object.xList,object.yList)
 
-    plt.title("Three bodies problem - Years = "+str(years))
+    plt.title("Three body problem - Years = "+str(years))
     plt.xlabel("x-position [10e9 m]")
     plt.ylabel("y-position [10e9 m]")
     plt.legend(loc="upper right")
