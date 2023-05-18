@@ -18,7 +18,7 @@ def PlotDistance(OBJECTS,DISTANCE,TIMES):
     
     time=np.arange(TIMES)
 
-    for i in range(len(OBJECTS)):
+    for i in range(3):
         plt.plot(time,DISTANCE[i],label=OBJECTS[i].name+"-"+OBJECTS[(i+1)%3].name+" distance")
 
     plt.title("Distances between bodies")
