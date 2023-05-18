@@ -1,14 +1,13 @@
 from Plot import*
 
-import copy as cp
 import time
 
 def main():
 
     start_time=time.time()
-    
+
     #Initializing
-    OBJECTS,TIMES=PRESETS[0]()
+    OBJECTS,TIMES=PRESETS[5]()
     DISTANCE=np.zeros([3,TIMES])
     years=0     
 
@@ -16,11 +15,9 @@ def main():
         
         #Find the tau
         TAU_LIST=[TAU]
-        OBJECTS_COPY=[]
         for i in range(3):
             if OBJECTS[i].motion:
                 TAU_LIST.append(OBJECTS[i].FindTau(OBJECTS[(i+1)%3],OBJECTS[(i+2)%3]))
-            OBJECTS_COPY.append(cp.copy(OBJECTS[i]))
         #Choose the smallest one
         new_TAU=min(TAU_LIST)
         
@@ -29,9 +26,9 @@ def main():
 
         #Calculate new position
         for i in range(3):
-            OBJECTS[i].Energy(OBJECTS_COPY[(i+1)%3],OBJECTS_COPY[(i+2)%3])
+            OBJECTS[i].Energy(OBJECTS[(i+1)%3],OBJECTS[(i+2)%3])
             if OBJECTS[i].motion:
-                OBJECTS[i].VerletPosition(OBJECTS_COPY[(i+1)%3],OBJECTS_COPY[(i+2)%3],new_TAU)
+                OBJECTS[i].VerletPosition(new_TAU)
 
         #Calculate new Velocity
         for i in range(3):
