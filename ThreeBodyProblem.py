@@ -23,6 +23,7 @@ def main():
             OBJECTS_COPY.append(cp.copy(OBJECTS[i]))
         #Choose the smallest one
         new_TAU=min(TAU_LIST)
+        
         #Count time
         years+=new_TAU
 
