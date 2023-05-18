@@ -6,7 +6,7 @@ import time
 def main():
 
     start_time=time.time()
-
+    
     #Initializing
     OBJECTS,TIMES=PRESETS[0]()
     DISTANCE=np.zeros([3,TIMES])
