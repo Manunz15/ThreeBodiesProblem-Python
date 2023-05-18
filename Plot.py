@@ -10,6 +10,7 @@ def PlotTraejctory(OBJECTS,years):
     plt.title("Three body problem - Years = "+str(years))
     plt.xlabel("x-position [10e9 m]")
     plt.ylabel("y-position [10e9 m]")
+    plt.axis('scaled')
     plt.legend(loc="upper right")
     plt.show()
 
