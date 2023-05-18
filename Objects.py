@@ -75,7 +75,7 @@ class Object():
         self.KineticList.append(0.5*self.mass*(self.vx**2+self.vy**2)*10**21)
         self.PotentialList.append(-G*self.mass*(Object1.mass/d1+Object2.mass/d2)*10**21)
 
-    def VerletPosition(self,Object1,Object2,new_TAU):
+    def VerletPosition(self,new_TAU):
 
         #New position
         self.x+=self.vx*new_TAU+0.5*self.ax*new_TAU**2
